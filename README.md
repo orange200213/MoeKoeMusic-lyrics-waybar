@@ -4,6 +4,10 @@
 *ai生成的脚本2333*
 
 ---
+##感谢
+- [MoeKoeMusic](https://github.com/MoeKoeMusic/)
+---
+
 ## 效果展示
 ![Alt](screenshots/example1.png)
 ![Alt](screenshots/example2.png)
@@ -79,7 +83,7 @@ mkdir -p ~/.config/waybar/scripts
 cp plugins/waybar/moekoe-lyrics.py ~/.config/waybar/scripts/moekoe-lyrics.py
 chmod +x ~/.config/waybar/scripts/moekoe-lyrics.py
 ```
-
+```bash
 # Bash 方案
 cp plugins/waybar/moekoe-lyrics.sh ~/.config/waybar/scripts/moekoe-lyrics.sh
 chmod +x ~/.config/waybar/scripts/moekoe-lyrics.sh
