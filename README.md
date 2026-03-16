@@ -4,7 +4,7 @@
 *ai生成的脚本2333*
 
 ---
-##感谢
+## 感谢
 - [MoeKoeMusic](https://github.com/MoeKoeMusic/)
 ---
 
