@@ -1,0 +1,31 @@
+// 将此片段加入你的 ~/.config/waybar/config（或 config.jsonc）的 modules-left / modules-center / modules-right 中：
+//
+//   "modules-left": ["custom/moekoe-lyrics"],
+//
+// 然后在同一文件的外层添加下面的模块配置：
+
+"custom/moekoe-lyrics": {
+    // 脚本路径，调整为你实际安装的位置
+    "exec": "$HOME/.config/waybar/scripts/moekoe-lyrics.py",
+
+    // 脚本输出 JSON，Waybar 从 stdout 逐行读取
+    "return-type": "json",
+
+    // "once"：只启动一次脚本进程并持续读取其输出（适合常驻脚本）
+    "interval": "once",
+
+    // 显示 tooltip（鼠标悬浮时显示歌曲名 - 歌手名）
+    "tooltip": true,
+
+    // 限制最大显示宽度（字符数），超出时截断
+    "max-length": 40,
+
+    // 可选：左键点击切换播放/暂停
+    "on-click": "python3 -c \"import websocket,json; ws=websocket.create_connection('ws://127.0.0.1:6520'); ws.send(json.dumps({'type':'control','data':{'command':'toggle'}})); ws.close()\"",
+
+    // 可选：右键切换下一首
+    "on-click-right": "python3 -c \"import websocket,json; ws=websocket.create_connection('ws://127.0.0.1:6520'); ws.send(json.dumps({'type':'control','data':{'command':'next'}})); ws.close()\"",
+
+    // 可选：中键切换上一首
+    "on-click-middle": "python3 -c \"import websocket,json; ws=websocket.create_connection('ws://127.0.0.1:6520'); ws.send(json.dumps({'type':'control','data':{'command':'prev'}})); ws.close()\""
+}

@@ -1,0 +1,28 @@
+/* 将此片段加入 ~/.config/waybar/style.css */
+
+/* 基础样式：斜体歌词 */
+#custom-moekoe-lyrics {
+    font-style: italic;
+    padding: 0 8px;
+    color: #cdd6f4; /* 默认文字颜色，按主题修改 */
+    transition: color 0.3s ease;
+}
+
+/* 播放中：高亮颜色 */
+#custom-moekoe-lyrics.playing {
+    color: #89b4fa; /* Catppuccin blue，按喜好修改 */
+}
+
+/* 暂停：灰色低调 */
+#custom-moekoe-lyrics.paused {
+    color: #6c7086;
+    font-style: normal;
+}
+
+/* 未连接 / 错误：更淡的颜色 */
+#custom-moekoe-lyrics.disconnected,
+#custom-moekoe-lyrics.error,
+#custom-moekoe-lyrics.connecting {
+    color: #45475a;
+    font-style: normal;
+}
